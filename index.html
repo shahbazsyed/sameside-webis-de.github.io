@@ -124,11 +124,10 @@ To participate, simply click on the register button below. At the end of the reg
     
               </p>
               <h2>Evaluation</h2>
-            <p class="card-text text-left">We provide a test set for each experiment setting (<i>Within Topics</i> and <i>Across topics</i>). After you train your model,
-              predict the labels of the test set and send us the results as a CSV file, comma seperated, with header
-              <i>id</i> and <i>label</i>. The <i>id</i> is the instance id provided in the test set and the <i>label</i>
-              has a value of <b>True</b> (the two arguments have the same side) or <b>False</b> (the two arguments do not
-              have the same side). The results will be evaluated using <strong>accuracy</strong>.
+            <p class="card-text text-left">We provide a test set for each experiment setting (<i>within topics</i> and <i>across topics</i>). Train your model, predict the labels of the test set, and send us the results as a CSV file, comma seperated, with header
+              <i>id</i> and <i>label</i>. The <i>id</i> is the instance id provided in the test set, and the <i>label</i>
+              has a value of 'True' (if the two arguments have the same side) or 'False' (if the two arguments do not
+              have the same side). The results will be evaluated and ranked by the achieved accuracy.
             </p>
     </div>
 </div>
