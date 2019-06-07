@@ -7,7 +7,6 @@ description: Same Side Stance Classification
 
 <div class="uk-section uk-section-default">
     <div class="uk-container">
-           
         <h1>Overview</h1>
 <p>
 Identifying (classifying) the stance of an argument towards a particular topic is a fundamental task in computational argumentation. The stance of an argument as considered here is a two-valued function: it can either be ''pro'' (=&nbsp;yes, agree) or ''con'' (=&nbsp;no, do not agree)  a topic.
@@ -25,7 +24,6 @@ We invite you to participate in the 'same side stance classification' task! To k
 To participate, simply click on the register button below. At the end of the registration process, you will be able to download the training and test datasets along with code to quickly set up your own experiments.
 </p>
       <div id="register">
-
           <p style="float:left">
             <a href="https://forms.gle/gKgMqtrHJojJHrZf9" class="uk-button uk-button-primary"  target="_blank">Register
             </a>
@@ -39,9 +37,9 @@ To participate, simply click on the register button below. At the end of the reg
 <hr>
 <h1>Dates</h1>
 <ul class="uk-list">
-    <li>June 5th, 2019: Training data available, competition begins. </li>
-    <li>June 6th, 2019: Submission open.</li>
-    <li>July 12th, 2019: Submission closed (23:59 PM UTC), manual evaluation begins.</li>
+    <li>June 8th, 2019: Training data available, competition begins. </li>
+    <li>June 9th, 2019: Submission open.</li>
+    <li>July 12th, 2019: Submission closed.</li>
     <li>August 1st, 2019: Results (accuracy and model overview) presented at <a href="https://argmining19.webis.de/"
     target="_blank">the 6th Workshop on Argument Mining</a>.</li>
 </ul>
@@ -61,11 +59,8 @@ To participate, simply click on the register button below. At the end of the reg
                   <li> <i>argument2_id</i>: The ID of argument2. <br></li>
                   <li> <i>is_same_stance</i>: True or False. True in case argument1 and argument2 have the same stance
                     towards the topic and False otherwise.<br></li>
-
-                  
                 </ul>
               </p>
-    
               <p>
                 We choose to work with the two most discussed topics in the considered four sources: <i>abortion</i> and <i>gay marriage</i>.
                 Two experiments are set-up for the task of <i>same side stance classification</i>:
@@ -95,11 +90,9 @@ To participate, simply click on the register button below. At the end of the reg
                         <td class="numeric"><b>23,063</b></td>
                       </tr>
                     </table>
-    
                   </li>
                   <li><i>Cross Topics</i>: The training set contains arguments for a topic (<i>abortion</i>) and the test
-                    set contains argument related to the another set of topics
-    
+                    set contains argument related to the another set of topics.
                     <table class="uk-margin-medium uk-table uk-table-divider uk-table-small sameside-table-small">
                       <tr>
                         <th>Class</th>
@@ -118,13 +111,8 @@ To participate, simply click on the register button below. At the end of the reg
                         <td class="numeric"><b>61,048</b></td>
                       </tr>
                     </table>
-    
-    
-    
                   </li>
                 </ul>
-    
-    
               </p>
               <h2>Evaluation</h2>
             <p class="card-text text-left">We provide a test set for each experiment setting (<i>within topics</i> and <i>across topics</i>). Train your model, predict the labels of the test set, and send us the results as a CSV file, comma seperated, with header
