@@ -10,16 +10,17 @@ description: Same Side Stance Classification
            
         <h1>Overview</h1>
         <p >
-          Identifying the stance of an argument towards a particular topic is a fundamental task in computational argumentation. The stance of an argument can be either pro or con the topic. The new task of same side classification approaches identifying the stance of arguments in a topic-agnostic way. Given two arguments on the same topic, the task aims at deciding whether they have the same or a different stance.
-</br></br>
-We invite you to participate in the task of 'same side stance classification'. The results of the shared task will be announced at the <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where a discussion of the task and the submissions will take place. Follow-up challenges on the task which will include larger datasets are being planned as well. 
-
-        </p>
+          Identifying (classifying) the stance of an argument towards a particular topic is a fundamental task in computational argumentation. The stance of an argument can be either pro or con the topic. With same side (stance) classification we address a simpler problem: Given two arguments regarding a certain topic, the task aims at deciding whether or not the arguments have the same stance.
+	</p>
         <p >
-        To participate in the workshop, please click on the register button bellow. At the end of the registeration, you will be able to download the training and test datasets. The participans are only required to submit a short description of their models along with the predicted labels for the provided test set. 
+Note that current stance classification algorithms require knowledge about the topic, i.e., they must be trained for a particular topic and hence cannot be reliably applied across topics. Since same side classification needs not to distinguish between topic-specific pro- and con-vocabulary respectively (''only'' the argument similarity <i>within</i> a stance needs to be assessed) it may be solved indepently of a topic, so to speak, in a <i>topic-agnostic</i> manner. The development of such a universal technology has game-changing potential; it could be used to tackle, for instance, the following tasks independent of a topic: measure the strength of the bias within an argumentation, structure a discussion, find out who or what is challenging one, or filter wrongly labeled arguments in an argument corpus.
+</p>
+        <p>	
+We invite you to participate in the task of 'same side stance classification'. The results of the shared task will be announced at the <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where also a discussion of the task and the submissions will take place. Follow-up challenges on the task, which will include much larger datasets to allow for deep learning, are in preparation and will be planned after we have collected your feedback.
         </p>
-
-	<p><strong>Note: </strong>You are not required to submit a paper. Participants should submit only a short description about their model(s) and the predicted labels.</p>
+        <p>
+        To participate in the workshop, please click on the register button bellow. At the end of the registration, you will be able to download the training and test datasets. To keep your effort low, participants are only required to submit a short description of their models along with the predicted labels for the provided test set.
+        </p>
 
       <div id="register">
 
