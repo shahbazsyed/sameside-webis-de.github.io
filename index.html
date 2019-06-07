@@ -1,0 +1,136 @@
+---
+layout: default
+nav_active: index
+title: Same Side Stance Classification - Webis Group
+description: Same Side Stance Classification
+---
+
+<div class="uk-section uk-section-default">
+    <div class="uk-container">
+           
+        <h1>About the shared task</h1>
+        <p >
+          Argumentation mining is of great importance for writing assistance, decision making, question answering, and much more. Identifying the stance of an argument towards a particular topic is a fundamental sub-task in argumentation mining. While this sub-task has been tackled before, it has been principally approached in a topic-dependent manner, i.e., given a topic and an argument, predict the stance of the argument towards the topic. As such approach is generally confined by setting a predefined topic in advance, we propose the new task of ‘same side stance classification’: Given two arguments on the same topic, decide whether they have the same or opposite stance towards the topic. <br \> <br \> 
+          We welcome you to participate in the task of 'same side stance classification'. We plan to open several calls for system submissions starting from <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where a discussion of the task and the submissions will take place. This will be followed by ongoing calls of the task at hand in the upcoming venues (e.g., SemEval). 
+
+        </p>
+        <p >
+          For now, you can regsiter and access the data. For the first phase,
+          participants are required to submit a description of their model and the predicted labels for the provided
+          test set. We will use only the <i>accuracy</i> as a metric to compare results. 
+      </p>
+      <p><strong>Note: </strong>You are not required to submit a paper. Participants should submit only a description about their model(s) and the predicted labels.</p>
+
+      <div id="register">
+
+          <p style="float:left">
+            <a href="https://forms.gle/gKgMqtrHJojJHrZf9" class="uk-button uk-button-primary"  target="_blank">Register
+            </a>
+            <a href="https://github.com/webis-de/argmining19-same-side-classification" target="_blank"
+            class="uk-button uk-button-primary" >Git</a>
+          </p>
+          <br>
+          <br>
+</div>
+<br>
+<hr>
+<h1>Dates</h1>
+<ul class="uk-list">
+    <li>June 5th, 2019: Training data available, competition begins. </li>
+    <li>June 6th, 2019: Submission open.</li>
+    <li>July 12th, 2019: Submission closed (23:59 PM UTC), manual evaluation begins.</li>
+    <li>August 1st, 2019: Results (accuracy and model overview) presented at <a href="https://argmining19.webis.de/"
+    target="_blank">the 6th Workshop on Argument Mining</a>.</li>
+</ul>
+<b>All deadlines are 11:59PM UTC-12:00 ("anywhere on Earth").</b>
+<hr>
+<h1>Task: Same Side Stance Classification</h1>
+        <h2>Dataset and Experiment Settings</h2>
+              <p>We provide the data from the following four sources: idebate.org,
+                debatepedia.org, debatewise.org and debate.org.
+                Each instance in the dataset holds the following fields: <br>
+                <ul>
+                  <li><i>id</i>: The id of the instance <br></li>
+                  <li><i>topic</i>: The title of the debate. It can be a general topic (e.g. abortion) or a topic with a
+                    stance (e.g. abortion should be legalized). <br></li>
+                  <li> <i>argument1</i>: A pro or con argument related to the topic. <br></li>
+                  <li> <i>argument2</i>: A pro or con argument related to the topic. <br></li>
+                  <li> <i>is_same_stance</i>: True or False. True in case argument1 and argument2 have the same stance
+                    towards the topic and False otherwise.<br></li>
+                  <li> <i>argument1_id</i>: The ID of argument1. <br></li>
+                  <li> <i>argument2_id</i>: The ID of argument2. <br></li>
+                </ul>
+              </p>
+    
+              <p>
+                We choose to work with the two most discussed topics: <i>abortion</i> and <i>gay marriage</i>.
+                We create two distinctive settings for the task of <i>same side classification</i>:
+                <ul>
+                  <li><i>Within Topics</i>: The training set contains arguments for a set of topics (<i>abortion</i> and
+                    <i>gay marriage</i>) and the test set contains arguments related to the same set of topics
+                    (<i>abortion</i> and <i>gay marriage</i>). The following table presents an overview about the data. <br>
+                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small">
+                        <tr>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Topic <br>
+                        Class
+                        </th>
+                        <th class="numeric">Abortion<br>&nbsp;</th>
+                        <th class="numeric">Gay Marriage<br>&nbsp;</th>
+                      </tr>
+                      <tr>
+                        <td> Same Side</td>
+                        <td class="numeric">20,834</td>
+                        <td class="numeric">13,277</td>
+                      </tr>
+                      <tr>
+                        <td> Different Side</td>
+                        <td class="numeric">20,006</td>
+                        <td class="numeric">9,786</td>
+                      </tr>
+                      <tr>
+                        <td> <b>Total</b></td>
+                        <td class="numeric"><b>40,840</b></td>
+                        <td class="numeric"><b>23,063</b></td>
+                      </tr>
+                    </table>
+    
+                  </li>
+                  <li><i>Cross Topics</i>: The training set contains arguments for a topic (<i>abortion</i>) and the test
+                    set contains argument related to the another set of topics
+    
+                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small">
+                      <tr>
+                        <th>Class</th>
+                        <th class="numeric"># of instances</th>
+                      </tr>
+                      <tr>
+                        <td> Same Side</td>
+                        <td class="numeric">31,195</td>
+                      </tr>
+                      <tr>
+                        <td> Different Side</td>
+                        <td class="numeric">29,853</td>
+                      </tr>
+                      <tr>
+                        <td> <b>Total</b></td>
+                        <td class="numeric"><b>61,048</b></td>
+                      </tr>
+                    </table>
+    
+    
+    
+                  </li>
+                </ul>
+    
+    
+              </p>
+              <h2>Evaluation</h2>
+            <p class="card-text text-left">For the first phase, the evaluation will be done manually. We provide a test
+              set for each experiment setting (<i>Within Topics</i> and <i>Across topics</i>). After you train your model,
+              predict the labels of the test set and send us the results as a CSV file, comma seperated, with header
+              <i>id</i> and <i>label</i>. The <i>id</i> is the instance id provided in the test set and the <i>label</i>
+              has a value of <b>True</b> (the two arguments have the same side) or <b>False</b> (the two arguments do not
+              have the same side). The results will be evaluated using <strong>accuracy</strong>.
+            </p>
+    </div>
+</div>

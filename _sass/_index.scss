@@ -1,0 +1,194 @@
+
+body {
+    overflow: hidden;
+}
+
+html {
+    overflow-y: auto;
+}
+
+.index-main-cover {
+
+    background-size: cover   ;
+    height: 290px;//260px;
+
+    background-color: $global-secondary-background;
+    background-image: url("../img/cover-img-resized.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    font-size: 1.05rem;
+
+    h1 {
+        font-size: 2.65rem;
+    }
+}
+
+.cover-background-fade {
+    @extend .uk-position-cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.85) 85%);
+}
+
+.title-link {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    .index-main-cover {
+        height: 405px; //305px;
+    }
+}
+
+@media (max-width: 400px) {
+    .index-main-cover {
+        height: 505px;//465px;
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .index-main-cover {
+        height: 35vh;
+    }
+}
+
+.news{
+    background-color: rgba(82,173,200,0.25)
+}
+.task-chair-organizations {
+    text-align:center
+   }
+   @media (min-width: 1200px) {
+    .task-chair-organizations {
+     width:75%;
+     margin-left:auto;
+     margin-right:auto
+    }
+   }
+   .task-chair-organizations>* {
+    height:60px;
+    display:inline-block;
+    padding:30px
+   }
+   .task-chair-organizations img,
+   .task-chair-organizations svg {
+    height:100%
+   }
+   .task-chair-organizations .logo-font {
+    display:inline-block;
+    padding-left:15px;
+    font-size:2.5em;
+    vertical-align:middle;
+    color:#555
+   }
+.keynote {
+    margin-bottom:40px
+   }
+   .keynote .keynote-speaker-image,
+   .keynote .keynote-meta {
+    display:table-cell;
+    vertical-align:middle
+   }
+   .keynote .keynote-speaker-image {
+    padding-right:22.5px
+   }
+   .keynote .keynote-speaker-image img {
+    height:100px;
+    width:85px;
+    max-width:none;
+    object-fit:cover;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1)
+   }
+   .keynote .keynote-title {
+    font-size:1.2rem;
+    font-weight:bold;
+    text-align:left;
+    margin-bottom:5px
+   }
+   .keynote .keynote-speaker {
+    text-align:left;
+    color:#666;
+    font-size:.875rem;
+    display:inline
+   }
+   .keynote .keynote-affiliation {
+    color:#666;
+    display:inline
+   }
+   .keynote .keynote-affiliation:before {
+    content:" • ";
+    padding:0 5px
+   }
+   .keynote .keynote-body {
+    margin-top:15px
+   }
+   .keynote footer {
+    color:#666;
+    font-style:italic
+   }
+   .keynote footer .keynote-bio p {
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    margin-bottom:5px
+   }
+   .keynote footer .keynote-bio .read-more {
+    display:block
+   }
+   .keynote footer .keynote-bio .read-less {
+    display:none
+   }
+   .keynote footer .keynote-bio.expanded .read-more {
+    display:none
+   }
+   .keynote footer .keynote-bio.expanded .read-less {
+    display:block
+   }
+   .keynote footer .keynote-bio.expanded p {
+    overflow:visible;
+    white-space:normal
+   }
+   .thumbnail-card-grid>* {
+    width:100%;
+    box-sizing:border-box;
+    hyphens:none;
+    -webkit-hyphens:none
+   }
+   @media (min-width: 960px) {
+    .thumbnail-card-grid>* {
+     width:50%
+    }
+   }
+   @media (min-width: 1200px) {
+    .thumbnail-card-grid>* {
+     width:25%
+    }
+   }
+   .thumbnail-card-grid .uk-card {
+    padding:15px
+   }
+   .thumbnail-card-grid .thumbnail-left {
+    margin:-15px;
+    margin-right:15px;
+    float:left;
+    height:calc(100% + 30px)
+   }
+   .thumbnail-card-grid .thumbnail-left img,
+   .thumbnail-card-grid .thumbnail-left svg {
+    height:100%;
+    min-height:145px;
+    width:110px;
+    object-fit:cover
+   }
+   .thumbnail-card-grid .thumbnail-top {
+    text-align:center;
+    margin-bottom:15px;
+    height:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center
+   }
+   .thumbnail-card-grid .thumbnail-top img,
+   .thumbnail-card-grid .thumbnail-top svg {
+    height:100%;
+    width:100%;
+    object-fit:contain
+   }

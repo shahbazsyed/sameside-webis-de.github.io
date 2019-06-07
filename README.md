@@ -1,2 +1,2 @@
-# sameside-webis-de.github.io
-Web page for same side stance classification
+# same-stance-challenge.github.io
+A website for the Same Stance Classification challenge

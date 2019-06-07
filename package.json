@@ -1,0 +1,12 @@
+ {
+  "name": "sameside.webis.de",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Roxanne El Baff",
+  "license": "MIT",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sameside-webis-de/sameside-webis-de.github.io.git"
+  }
+}

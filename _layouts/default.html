@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="&copy; {{site.time | date: '%Y'}} Webis">
+    <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}?{{site.time | date: '%s'}}">
+    {%- for css in page.additional_css %}
+    <link rel="stylesheet" href="{{ css | relative_url }}?{{site.time | date: '%s'}}">
+    {%- endfor %}
+</head>
+<body class="uk-offcanvas-content">
+<script src="{{ '/js/thirdparty/uikit/uikit.min.js' | relative_url }}"></script>
+<script src="{{ '/js/thirdparty/uikit/uikit-icons.min.js' | relative_url }}"></script>
+
+
+
+
+
+   <!--       
+<div id="offcanvas-nav" class="uk-hidden@m" data-uk-offcanvas="overlay: true; flip: true;">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+       Mobile navigation
+        <nav class="uk-margin-large-top">
+            <ul class="uk-nav uk-nav-primary uk-nav-parent-icon" data-uk-nav>
+                   
+                <li{% if page.nav_active == "task" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/task.html' | relative_url }}">Task</a>
+                </li>
+                <li{% if page.nav_active == "dates" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/dates.html' | relative_url }}">Dates</a>
+                </li>
+                
+                
+              
+                <li{% if page.nav_active == "organizers" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/organizers.html' | relative_url }}">Organizers</a>
+                </li>
+    
+
+               <li class="uk-position-bottom-right uk-padding">
+                    <a target="_blank" href="https://webis.de">Webis.de</a>
+            </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+ -->
+<div class="uk-background-secondary global-nav uk-visible@m" data-uk-sticky="media: @m">
+    <!-- Desktop navigation -->
+    <nav class="uk-navbar-container uk-navbar-transparent uk-container uk-light" data-uk-navbar="mode: click">
+        
+            <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav">
+                            <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
+                                    <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
+                                </li>
+                    </ul>
+            </div>
+        
+        
+       <!-- <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                
+                
+                <li{% if page.nav_active == "task" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/task.html' | relative_url }}">Task</a>
+                </li>
+                <li{% if page.nav_active == "dates" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/dates.html' | relative_url }}">Dates</a>
+                </li>
+              
+                <li{% if page.nav_active == "organizers" %} class="uk-active"{% endif %}>
+                    <a href="{{ '/organizers.html' | relative_url }}">Organizers</a>
+                </li>
+     
+               
+            </ul>
+        </div>    -->
+    </nav>
+</div>
+
+<div class="uk-background-secondary global-nav uk-hidden@m" data-uk-sticky>
+    <div class="uk-navbar-container uk-navbar-transparent uk-container uk-light mobile-nav-toggle" data-uk-navbar>
+        <div class="">
+            <ul class="uk-navbar-nav">
+            
+                <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
+                        <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
+                    </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<!-- IN CASE WE WANT TO ADD AN IMAGE - DO IT HERE -->
+<!--<main class="uk-section uk-cover-container index-main-cover">
+    <div class="cover-background-fade"></div>
+    <div class="uk-container uk-position-bottom uk-light uk-padding">
+            <h1>Same Side Stance Classification</h1>
+            <h2>Results Presented at <a class="title-link" href="https://argmining19.webis.de" target="blank">Argmining 2019</a> in Florence, Italy</h2>
+        
+    </div>
+</main>
+-->
+
+<div data-uk-height-viewport="expand: true">
+    {{ content }}
+    </div>
+
+
+
+
+
+<footer class="uk-section uk-section-muted">
+       <div class ="uk-container Hyphenator202css3hyphenate">
+            <h2>Organizers</h2>
+            <div data-uk-grid="" class="uk-grid uk-grid-match uk-grid-small thumbnail-card-grid">
+                <div class="uk-first-column">
+                    <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://webis.de" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/figures/ajjour.jpg" alt="Yamen Ajjour"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Yamen Ajjour</div>
+                                <div class="uk-text-muted uk-margin-small-top">Bauhaus-Universität, Weimar</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <a href="https://webis.de" class="uk-link-reset">
+                        <div class="thumbnail-left"><img src="/figures/al-khatib.jpg" alt="Khalid Al-Khatib"></div>
+                        <div class="uk-height-1-1">
+                            <div class="uk-card-title">Khalid Al-Khatib</div>
+                            <div class="uk-text-muted uk-margin-small-top">Bauhaus-Universität, Weimar</div>
+                        </div>
+                    </a>
+                </div>
+                </div>
+                <div>
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <a href="http://www.sc.cit-ec.uni-bielefeld.de/team/philipp-cimiano/" class="uk-link-reset">
+                                <div class="thumbnail-left"><img src="/figures/cimiano.jpg" alt="Philipp Cimiano"></div>
+                                <div class="uk-height-1-1">
+                                    <div class="uk-card-title">Philipp Cimiano</div>
+                                    <div class="uk-text-muted uk-margin-small-top">Bielefeld University, Bielefeld</div>
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://webis.de" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/figures/elbaff.jpg" alt="Roxanne El Baff"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Roxanne El Baff</div>
+                                <div class="uk-text-muted uk-margin-small-top">Bauhaus-Universität, Weimar</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div>
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <a href="http://www.sc.cit-ec.uni-bielefeld.de/team/basil-ell/" class="uk-link-reset">
+                                <div class="thumbnail-left"><img src="/figures/ell.jpg" alt="Basil Ell"></div>
+                                <div class="uk-height-1-1">
+                                    <div class="uk-card-title">Basil Ell</div>
+                                    <div class="uk-text-muted uk-margin-small-top">Bielefeld University, Bielefeld - Oslo University, Oslo</div>
+                                </div>
+                            </a>
+                        </div>
+                        </div>
+                
+                <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                        <a href="https://webis.de" class="uk-link-reset">
+                            <div class="thumbnail-left"><img src="/figures/stein.jpg" alt="Benno Stein"></div>
+                            <div class="uk-height-1-1">
+                                <div class="uk-card-title">Benno Stein</div>
+                                <div class="uk-text-muted uk-margin-small-top">Bauhaus-Universität, Weimar</div>
+                            </div>
+                        </a>
+                    </div>
+
+            </div>
+            <div>
+                    <div class="uk-card uk-card-default uk-card-body">
+                            <a href="https://cs.uni-paderborn.de/css/" class="uk-link-reset">
+                                <div class="thumbnail-left"><img src="/figures/wachsmuth.jpg" alt="Henning Wachsmuth"></div>
+                                <div class="uk-height-1-1">
+                                    <div class="uk-card-title">Henning Wachsmuth</div>
+                                    <div class="uk-text-muted uk-margin-small-top">Paderborn University, Paderborn</div>
+                                </div>
+                            </a>
+                        </div>
+    
+                </div>
+
+
+            </div>
+           
+            
+        </div>
+    </div>
+     <div class="uk-container uk-padding-large uk-padding-remove-bottom">
+    <div class="task-chair-organizations">
+    <div>
+        <a href="https://weimar.webis.de" target="_blank">
+            <img src="/img/logo-bauhaus-universitaet-weimar.png" alt="Bauhaus-Universtät Weimar logo">
+        </a>
+    </div>
+    
+    <div>
+            <a href="http://www.sc.cit-ec.uni-bielefeld.de/home/" target="_blank">
+                <img src="/img/logo-bielefeld-university.png" alt="University of Bielefeld logo">
+            </a>
+        </div>
+
+    <div>
+        <a href="https://cs.uni-paderborn.de/css/" target="_blank">
+            <img src="/img/logo-pu.png" alt="University of Paderborn logo">
+        </a>
+    </div>
+    
+   
+
+</div>
+        </div> 
+
+
+        <div class="uk-container">
+                <div class="uk-align-right@m uk-margin-top">
+                        <a href="https://webis.de/" target="_blank">Copyright &copy; {{site.time | date: '%Y'}} Webis Group</a>
+                        <span class="uk-padding-small">&bullet;</span>
+                    <a href="mailto:yamen.ajjour@uni-weimar.de,benno.stein@uni-weimar.de,roxanne.el.baff@uni-weimar.de?subject=[Same Side Stance Classification]">Contact</a>
+                </div>
+            </div>
+           
+    </footer>
+<script>
+    UIkit.util.ready(() => {
+        const nav = UIkit.util.$(".global-nav");
+        const navHeight = UIkit.util.height(nav);
+
+        // correct scroll offset due to fixed navigation after page load
+        let fixScrollHeight = () => {
+            if (location.hash === "" || !UIkit.util.$(location.hash)) {
+                return;
+            }
+
+            const pos = document.documentElement.scrollTop;
+            const offset = UIkit.util.offset(UIkit.util.$(location.hash));
+
+            if (pos > navHeight * .8 && offset) {
+                document.documentElement.scrollTop = offset.top - navHeight - 20;
+            }
+        };
+
+        window.addEventListener("hashchange", fixScrollHeight, false);
+        setTimeout(fixScrollHeight, 100);
+    });
+</script>
+
+</body>
+</html>
