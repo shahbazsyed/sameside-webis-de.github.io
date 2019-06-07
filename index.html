@@ -8,18 +8,18 @@ description: Same Side Stance Classification
 <div class="uk-section uk-section-default">
     <div class="uk-container">
            
-        <h1>About the shared task</h1>
+        <h1>Overview</h1>
         <p >
-          Argumentation mining is of great importance for writing assistance, decision making, question answering, and much more. Identifying the stance of an argument towards a particular topic is a fundamental sub-task in argumentation mining. While this sub-task has been tackled before, it has been principally approached in a topic-dependent manner, i.e., given a topic and an argument, predict the stance of the argument towards the topic. As such approach is generally confined by setting a predefined topic in advance, we propose the new task of ‘same side stance classification’: Given two arguments on the same topic, decide whether they have the same or opposite stance towards the topic. <br \> <br \> 
-          We welcome you to participate in the task of 'same side stance classification'. We plan to open several calls for system submissions starting from <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where a discussion of the task and the submissions will take place. This will be followed by ongoing calls of the task at hand in the upcoming venues (e.g., SemEval). 
+          Identifying the stance of an argument towards a particular topic is a fundamental task in computational argumentation. The stance of an argument can be either pro or con the topic. The new task of same side classification approaches identifying the stance of arguments in a topic-agnostic way. Given two arguments on the same topic, the task aims at deciding whether they have the same or a different stance.
+</br></br>
+We invite you to participate in the task of 'same side stance classification'. The results of the shared task will be announced at the <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where a discussion of the task and the submissions will take place. Follow-up challenges on the task which will include larger datasets are being planned as well. 
 
         </p>
         <p >
-          For now, you can regsiter and access the data. For the first phase,
-          participants are required to submit a description of their model and the predicted labels for the provided
-          test set. We will use only the <i>accuracy</i> as a metric to compare results. 
-      </p>
-      <p><strong>Note: </strong>You are not required to submit a paper. Participants should submit only a description about their model(s) and the predicted labels.</p>
+        To participate in the workshop, please click on the register button bellow. At the end of the registeration, you will be able to download the training and test datasets. The participans are only required to submit a short description of their models along with the predicted labels for the provided test set. 
+        </p>
+
+	<p><strong>Note: </strong>You are not required to submit a paper. Participants should submit only a short description about their model(s) and the predicted labels.</p>
 
       <div id="register">
 
@@ -44,32 +44,33 @@ description: Same Side Stance Classification
 </ul>
 <b>All deadlines are 11:59PM UTC-12:00 ("anywhere on Earth").</b>
 <hr>
-<h1>Task: Same Side Stance Classification</h1>
-        <h2>Dataset and Experiment Settings</h2>
-              <p>We provide the data from the following four sources: idebate.org,
-                debatepedia.org, debatewise.org and debate.org.
-                Each instance in the dataset holds the following fields: <br>
+<h1>Task Description</h1>
+        <h2>Dataset and Experimental Settings</h2>
+              <p>The dataset used in the task are derived from the following four sources: idebate.org,
+                debatepedia.org, debatewise.org and debate.org. Each instance in the dataset holds the following fields: <br>
                 <ul>
                   <li><i>id</i>: The id of the instance <br></li>
                   <li><i>topic</i>: The title of the debate. It can be a general topic (e.g. abortion) or a topic with a
                     stance (e.g. abortion should be legalized). <br></li>
                   <li> <i>argument1</i>: A pro or con argument related to the topic. <br></li>
+                  <li> <i>argument1_id</i>: The ID of argument1. <br></li>
                   <li> <i>argument2</i>: A pro or con argument related to the topic. <br></li>
+                  <li> <i>argument2_id</i>: The ID of argument2. <br></li>
                   <li> <i>is_same_stance</i>: True or False. True in case argument1 and argument2 have the same stance
                     towards the topic and False otherwise.<br></li>
-                  <li> <i>argument1_id</i>: The ID of argument1. <br></li>
-                  <li> <i>argument2_id</i>: The ID of argument2. <br></li>
+
+                  
                 </ul>
               </p>
     
               <p>
-                We choose to work with the two most discussed topics: <i>abortion</i> and <i>gay marriage</i>.
-                We create two distinctive settings for the task of <i>same side classification</i>:
+                We choose to work with the two most discussed topics in the considered four sources: <i>abortion</i> and <i>gay marriage</i>.
+                Two experiments are planned for the task of <i>same side stance classification</i>:
                 <ul>
                   <li><i>Within Topics</i>: The training set contains arguments for a set of topics (<i>abortion</i> and
                     <i>gay marriage</i>) and the test set contains arguments related to the same set of topics
                     (<i>abortion</i> and <i>gay marriage</i>). The following table presents an overview about the data. <br>
-                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small">
+                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small sameside-table-normal">
                         <tr>
                         <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Topic <br>
                         Class
@@ -98,7 +99,7 @@ description: Same Side Stance Classification
                   <li><i>Cross Topics</i>: The training set contains arguments for a topic (<i>abortion</i>) and the test
                     set contains argument related to the another set of topics
     
-                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small">
+                    <table class="uk-margin-medium uk-table uk-table-divider uk-table-small sameside-table-small">
                       <tr>
                         <th>Class</th>
                         <th class="numeric"># of instances</th>
@@ -125,8 +126,7 @@ description: Same Side Stance Classification
     
               </p>
               <h2>Evaluation</h2>
-            <p class="card-text text-left">For the first phase, the evaluation will be done manually. We provide a test
-              set for each experiment setting (<i>Within Topics</i> and <i>Across topics</i>). After you train your model,
+            <p class="card-text text-left">We provide a test set for each experiment setting (<i>Within Topics</i> and <i>Across topics</i>). After you train your model,
               predict the labels of the test set and send us the results as a CSV file, comma seperated, with header
               <i>id</i> and <i>label</i>. The <i>id</i> is the instance id provided in the test set and the <i>label</i>
               has a value of <b>True</b> (the two arguments have the same side) or <b>False</b> (the two arguments do not
