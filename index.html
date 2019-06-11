@@ -15,6 +15,14 @@ Identifying (classifying) the stance of an argument towards a particular topic i
 With the new task &raquo;same side (stance) classification&laquo; we address a simpler variant of this problem: Given two arguments regarding a certain topic, the task is to decide whether or not the two arguments have the same stance.
 </p>
 <p>
+<strong> Example: </strong>
+<table class="uk-margin-medium uk-table uk-table-divider">
+  <tr><th>Argument 1</th><th>Argument 2</th><th style="width:80px" > Same Side</th></tr>
+  <tr><td>Gay marriage is wrong because it is not marriage. the definition of marriage is the formal recognized union of a man and a woman as in a relationship</td><td>The catholic church is the most prominent of christian institutions. The vatican's opposition to gay marriage carries significant weight against the notion of gay marriage.</td><td>True</td></tr>
+
+</table>
+</p>
+<p>
 <strong> Rationale. </strong> Current stance classification algorithms require knowledge about the topic the argument is about, i.e., the classifiers must be trained for a particular topic and hence cannot be reliably applied for other (=&nbsp;across) topics. Observe that same side classification needs not to distinguish between topic-specific pro- and con-vocabulary &mdash; ''only'' the argument similarity <i>within</i> a stance needs to be assessed. I.e., same side classification can probably be solved independently of a topic or a domain, so to speak, in a <i>topic-agnostic</i> fashion. We believe that the development of such a technology has game-changing potential. It could be used to tackle, for instance, the following tasks: measure the bias strength within an argumentation, structure a discussion, find out who or what is challenging in a discussion, or filter wrongly labeled arguments in a large argument corpus&mdash;without relying on knowledge of a topic or a domain.
 </p>
 <p>	
