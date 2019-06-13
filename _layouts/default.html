@@ -64,25 +64,7 @@
                     </ul>
             </div>
         
-        
-       <!-- <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
-                
-                
-                <li{% if page.nav_active == "task" %} class="uk-active"{% endif %}>
-                    <a href="{{ '/task.html' | relative_url }}">Task</a>
-                </li>
-                <li{% if page.nav_active == "dates" %} class="uk-active"{% endif %}>
-                    <a href="{{ '/dates.html' | relative_url }}">Dates</a>
-                </li>
-              
-                <li{% if page.nav_active == "organizers" %} class="uk-active"{% endif %}>
-                    <a href="{{ '/organizers.html' | relative_url }}">Organizers</a>
-                </li>
-     
-               
-            </ul>
-        </div>    -->
+ 
     </nav>
 </div>
 
@@ -239,15 +221,20 @@
         </div> 
 
 
-        <div class="uk-container">
-                <div class="uk-align-right@m uk-margin-top">
-                        Copyright &copy; {{site.time | date: '%Y'}} <a href="https://webis.de/" target="_blank">Webis Group</a>
-                        <span class="uk-padding-small">&bullet;</span>
-                    <a href="mailto:yamen.ajjour@uni-weimar.de,benno.stein@uni-weimar.de,roxanne.el.baff@uni-weimar.de?subject=[Same Side Stance Classification]">Contact</a>
-                </div>
-            </div>
            
     </footer>
+
+
+    <footer class="uk-section uk-section-muted footer-section">
+        <div class="uk-container">
+            <div class="uk-align-right@m uk-margin-top">
+                Copy­right © 2019 <a href="https://webis.de/">Webis Group</a> <span class="uk-padding-small">•</span>
+                <a href="mailto:yamen.ajjour@uni-weimar.de,benno.stein@uni-weimar.de,roxanne.el.baff@uni-weimar.de?subject=[Same Side Stance Classification]">Con­tact</a> <span class="uk-padding-small">•</span>
+                <a href="#">Pri­vacy</a> <span class="uk-padding-small">•</span>
+                <a href="#">Legal Info / Im­pres­sum</a>
+            </div>
+        </div>
+    </footer> 
 <script>
     UIkit.util.ready(() => {
         const nav = UIkit.util.$(".global-nav");
