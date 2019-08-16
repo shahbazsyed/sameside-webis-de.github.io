@@ -7,6 +7,10 @@ html {
     overflow-y: auto;
 }
 
+.news{
+    background-color: rgba(82,173,200,0.25)
+}
+
 .index-main-cover {
 
     background-size: cover   ;
@@ -202,3 +206,51 @@ html {
    {
       max-width:600px;
    }
+   .subrow{
+       background: #f3f3f3;
+       text-decoration: none; 
+       cursor: default; 
+       
+   }
+   .subrow{
+    background: #f3f3f3;
+    pointer-events: none;
+    text-decoration: none;
+    text-align: right;
+    display: none;
+
+}
+.subrow:hover{
+    pointer-events: none;
+    text-decoration: none;
+
+}
+.leaderboard{
+    max-width: 525px;
+    
+    
+}
+.leaderboard th{
+    text-align: center;
+    
+}
+.mainrow, .mainrowsub {
+    background:  rgba(82,173,200,0.25);
+    font-size:1.1rem;
+    
+}
+.mainrow td:last-of-type{
+    font-weight:bold;
+}
+.leaderboard td:nth-of-type(4), .leaderboard td:nth-of-type(5), .leaderboard td:nth-of-type(6), 
+td:nth-of-type(7), .leaderboard td:nth-of-type(8), .leaderboard td:nth-of-type(9),
+.subrow td:nth-of-type(4), .subrow td:nth-of-type(5), .subrow td:nth-of-type(3){
+    text-align: right;
+}
+
+.no-align{
+    text-align: left !important
+}
+.dismissed{
+    color: #aaaaaa
+}

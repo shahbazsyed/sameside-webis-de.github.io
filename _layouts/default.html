@@ -17,6 +17,7 @@
 <script src="{{ '/js/thirdparty/uikit/uikit.min.js' | relative_url }}"></script>
 <script src="{{ '/js/thirdparty/uikit/uikit-icons.min.js' | relative_url }}"></script>
 
+<script src="{{ '/js/thirdparty/jquery/jquery.min.js' | relative_url }}"></script>
 
 
 
@@ -61,8 +62,18 @@
                             <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
                                     <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
                                 </li>
+                             
                     </ul>
             </div>
+            <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                                <li{% if page.nav_active == "leaderboard" %} class="uk-active"{% endif %}>
+                                        <a href="{{ '/leaderboard.html' | relative_url }}">Leaderboard</a>
+                                    </li>
+                             
+                    </ul>
+            </div>
+            
         
  
     </nav>
@@ -76,22 +87,16 @@
                 <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
                         <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
                     </li>
+                    <li{% if page.nav_active == "leaderboard" %} class="uk-active"{% endif %}>
+                                        <a href="{{ '/leaderboard.html' | relative_url }}">Leaderboard</a>
+                                    </li>
             </ul>
         </div>
 
     </div>
 </div>
 
-<!-- IN CASE WE WANT TO ADD AN IMAGE - DO IT HERE -->
-<!--<main class="uk-section uk-cover-container index-main-cover">
-    <div class="cover-background-fade"></div>
-    <div class="uk-container uk-position-bottom uk-light uk-padding">
-            <h1>Same Side Stance Classification</h1>
-            <h2>Results Presented at <a class="title-link" href="https://argmining19.webis.de" target="blank">Argmining 2019</a> in Florence, Italy</h2>
-        
-    </div>
-</main>
--->
+
 
 <div data-uk-height-viewport="expand: true">
     {{ content }}
@@ -235,6 +240,13 @@
         </div>
     </footer> 
 <script>
+    $(document).ready(function() {
+
+        $("#within-leaderboard > tbody > tr").not('.subrow').click(function() {
+            $('[name="'+$(this).attr('id')+'"]').toggle();
+        });
+
+    });
     UIkit.util.ready(() => {
         const nav = UIkit.util.$(".global-nav");
         const navHeight = UIkit.util.height(nav);
