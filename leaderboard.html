@@ -53,8 +53,8 @@ description: Same Side Stance Classification
         <tr class="subrow no-align" name="1">
                 <td colspan="6"><b>Model overview:</b> BERT (large, uncased, sequence length 512), tuning for 3 epochs.</td>
                 </tr>
-        <tr id="2">
-            <td>2</td>
+        <tr id="2" class="mainrow">
+            <td>1</td>
             <td>ASV</td>
             <td>Leipzig University </td>
             <td>0.79</td>
@@ -77,7 +77,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> BERT (uncased, sequence length 512, tuning for 5 epochs), loss function: sigmoid_binary_crossentrophy.</td>
                 </tr>
         <tr id="3">
-            <td>3</td>
+            <td>2</td>
             <td>IBM Research </td>
             <td>IBM Research </td>
             <td>0.69</td>
@@ -100,7 +100,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Two BERT models fine-tuned in cascade starting from the vanilla BERT model.</td>
                 </tr>
         <tr id="4">
-            <td>4</td>
+            <td>3</td>
             <td>UKP</td>
             <td>TU Darmstadt </td>
             <td>0.68</td>
@@ -123,7 +123,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Microsoft's Multi-Task Deep Neural Network mt-dnn. Basis for the mt-dnn is BERT (large). No hyper-parameter tuning, 4 epochs.</td>
                 </tr>
         <tr id="5">
-            <td>5</td>
+            <td>4</td>
             <td>HHU SSSC</td>
             <td>Düsseldorf University </td>
             <td>0.70</td>
@@ -146,7 +146,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Manhattan LSTM -- a siamese network -- which measures the similarity of both arguments. Document embeddings via BERT (base, uncased, not fine-tuned, sequence length 512 tokens).</td>
                 </tr>
         <tr id="6">
-            <td>6</td>
+            <td>5</td>
             <td>DBS</td>
             <td>LMU*</td>
             <td>0.53</td>
@@ -169,7 +169,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Bert (base). Arguments organized as graph: edges are weighted with the confidence that arguments agree and confidence that they disagree. If known from training set that the arguments agree or disagree the confidence is 0 and 1 or 1 and 0 accordingly.</td>
                 </tr>
         <tr id="7">
-            <td>7</td>
+            <td>6</td>
             <td>ACQuA</td>
             <td>MLU Halle </td>
             <td>0.53</td>
@@ -192,7 +192,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Rule-based: same-side classification is considered as a sentiment analysis task. Arguments with negative as well as positive sentiments are on the same side. Vocabulary withf positive and negative words from Minqing Hu and Bing Liu.</td>
                 </tr>
         <tr id="8">
-            <td>8</td>
+            <td>7</td>
             <td>Paderborn University</td>
             <td>Paderborn University </td>
             <td>0.59</td>
@@ -215,7 +215,7 @@ description: Same Side Stance Classification
                 <td colspan="6"><b>Model overview:</b> Siamese Neural Network as a benchmark model. Embedding via Flair library.</td>
                 </tr>
         <tr id="9">
-            <td>9</td>
+            <td>8</td>
             <td>sam</td>
             <td>Postdam University </td>
             <td>0.51</td>
@@ -279,7 +279,7 @@ description: Same Side Stance Classification
         </tr>
 
         <tr >
-            <td>2</td>
+            <td>1</td>
             <td>DBS</td>
             <td>LMU </td>
             <td>0.67</td>
