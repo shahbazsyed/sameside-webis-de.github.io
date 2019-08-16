@@ -10,10 +10,12 @@ description: Same Side Stance Classification
     <div class="uk-container">
 
             <h1>Leaderboard</h1>
-            <p>We show the best performing model (best accuracy) for each team, sorted by highest accuracy.</p>
+            <p>We show the best performing model (based on accuracy) for each team, sorted by highest accuracy.</p>
 <h2> <i>Within</i> Setting Results</h2>
 
-<p>DBS team from LMU exploited the data leakage between the <i>training</i> set and the <i>test</i> set. They were able to predict 99% of the instances. For this reason, we evaluate all submitted predictions using a balanced subset of of the original <i>test</i> set which is not deducible from the <i>training</i> set. </p>
+<p>We evaluate all submitted predictions using a balanced subset of of the original <i>test</i> set which is not deducible from the <i>training</i> set. </p>
+
+<p>To see more details about each model, click on the row.</p>
 <table id="within-leaderboard" class="leaderboard uk-table  uk-table-hover uk-table-condensed">
 
     <thead>
@@ -146,7 +148,7 @@ description: Same Side Stance Classification
         <tr id="6">
             <td>6</td>
             <td>DBS</td>
-            <td>LMU </td>
+            <td>LMU*</td>
             <td>0.53</td>
             <td>1.00</td>
             <td> 0.55</td>
@@ -237,25 +239,23 @@ description: Same Side Stance Classification
                 </tr>
     </tbody>
 </table>
+
+<p>* <b>Honourable mention:</b> DBS team from LMU exploited the data leakage between the <i>training</i> set and the <i>test</i> set. They were able to predict 99% of the instances.</p>
+
 <hr>
 
 
 <h2> <i>Cross</i> Setting Results</h2>
-<p> We conduct the evaluation on two subsets for the <i>Cross</i> domain <i>test</i> set:
-    <ul>
+<p> We conduct the evaluation on a balanced subset of the <i>Cross</i> domain <i>test</i> set:
+ <!--   <ul>
             <li><b>Balanced Test Set:</b> balanced subset of the original <i>cross</i> domain <i>test</i> set.</li>
             <li><b>Balanced/No Leakage Test Set:</b> a subset which can not be leaked from the <i>within</i> domain <i>training</i> set. </li>
-    </ul>
+    </ul>-->
 </p>
 <table id="within-leaderboard" class="leaderboard uk-table  uk-table-hover uk-table-condensed">
 
     <thead>
-        <tr>
-
-            <th colspan="3"></th>
-            <th colspan="3">Balanced Test Set</th>
-            <th colspan="3">Balanced/No Leakage Test Set</th>
-        </tr>
+   
         <tr>
             <th>#</th>
             <th>Team</th>
@@ -263,24 +263,31 @@ description: Same Side Stance Classification
             <th>Precision</th>
             <th>Recall</th>
             <th>Accuracy</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th>Accuracy</th>
         </tr>
     </thead>
     <tbody>
-
-
         <tr class="mainrow">
             <td>1</td>
+            <td>HHU SSSC</td>
+            <td>Düsseldorf University </td>
+            <td>0.72</td>
+            <td>0.53</td>
+            <td>0.66</td>
+        <!--  <td>0.68</td>
+            <td>0.37</td>
+            <td>0.60</td>--> 
+        </tr>
+
+        <tr >
+            <td>2</td>
             <td>DBS</td>
             <td>LMU </td>
             <td>0.67</td>
             <td>0.53</td>
             <td>0.63</td>
-            <td>0.78</td>
+         <!--   <td>0.78</td>
             <td>0.61</td>
-            <td>0.72</td>
+            <td>0.72</td>-->
         </tr>
         <tr>
             <td>2</td>
@@ -289,9 +296,9 @@ description: Same Side Stance Classification
             <td>0.64</td>
             <td>0.59</td>
             <td>0.63</td>
-            <td>0.71</td>
+          <!--  <td>0.71</td>
             <td>0.63</td>
-            <td>0.68</td>
+            <td>0.68</td> -->
         </tr>
         <tr>
             <td>3</td>
@@ -300,9 +307,9 @@ description: Same Side Stance Classification
             <td>0.62</td>
             <td>0.49</td>
             <td>0.60</td>
-            <td>0.74</td>
+         <!--   <td>0.74</td>
             <td>0.43</td>
-            <td>0.64</td>
+            <td>0.64</td>-->
         </tr>
         <tr>
             <td>4</td>
@@ -311,9 +318,9 @@ description: Same Side Stance Classification
             <td>0.60</td>
             <td>0.38</td>
             <td>0.56</td>
-            <td>0.79</td>
+        <!--    <td>0.79</td>
             <td>0.33</td>
-            <td>0.62</td>
+            <td>0.62</td>-->
         </tr>
         <tr>
             <td>5</td>
@@ -322,57 +329,45 @@ description: Same Side Stance Classification
             <td>0.69</td>
             <td>0.16</td>
             <td>0.54</td>
-            <td>1.00</td>
+         <!--   <td>1.00</td>
             <td>0.20</td>
-            <td>0.60</td>
+            <td>0.60</td>-->
         </tr>
-        <tr class="mainrowsub">
-            <td>6</td>
-            <td>HHU SSSC</td>
-            <td>Düsseldorf University </td>
-            <td>0.72</td>
-            <td>0.53</td>
-            <td><b>0.66</b></td>
-            <td>0.68</td>
-            <td>0.37</td>
-            <td>0.60</td>
-        </tr>
+        
         <tr>
-            <td>7</td>
+            <td>6</td>
             <td>ACQuA</td>
             <td>MLU Halle </td>
             <td>0.50</td>
             <td>0.57</td>
             <td>0.50</td>
-            <td>0.60</td>
+        <!--    <td>0.60</td>
             <td>0.54</td>
-            <td>0.59</td>
+            <td>0.59</td>--> 
         </tr>
         <tr>
-            <td>8</td>
+            <td>7</td>
             <td>sam</td>
             <td>Postdam University </td>
             <td>0.51</td>
             <td>0.52</td>
             <td>0.51</td>
-            <td>0.57</td>
+        <!--    <td>0.57</td>
             <td>0.65</td>
-            <td>0.58</td>
+            <td>0.58</td> -->
         </tr>
-        <tr class="dismissed">
-            <td>na</td>
+       <!--  <tr class="dismissed">
+            <td>NA</td>
             <td>ASV*</td>
             <td>Leipzig University </td>
             <td>0.93</td>
             <td>0.90</td>
             <td>0.92</td>
-            <td>0.84</td>
-            <td>0.78</td>
-            <td>0.82</td>
+          -->
         </tr>
     </tbody>
 </table>
-* Dismissed because trained on <i>within</i> training set
+<!-- <p>* Dismissed because trained on <i>within</i> training set</p> -->
 <hr>
 
 </div>
