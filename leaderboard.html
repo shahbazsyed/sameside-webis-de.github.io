@@ -11,11 +11,11 @@ description: Same Side Stance Classification
 
             <h1>Leaderboard</h1>
             <p>We show the best performing model (based on accuracy) for each team, sorted by highest accuracy.</p>
-<h2> <i>Within</i> Setting Results</h2>
+<h2> Results <i>Within Topics</i> </h2>
 
-<p>We evaluate all submitted predictions using a balanced subset of of the original <i>test</i> set which is not deducible from the <i>training</i> set. </p>
+<p>We evaluate all submitted predictions using a balanced subset of of the original <i>test</i> set. </p>
 
-<p>To see more details about each model, click on the row.</p>
+<p>To see more details about each model, click on each row.</p>
 <table id="within-leaderboard" class="leaderboard uk-table  uk-table-hover uk-table-condensed">
 
     <thead>
@@ -240,12 +240,12 @@ description: Same Side Stance Classification
     </tbody>
 </table>
 
-<p>* <b>Honourable mention:</b> DBS team from LMU exploited the data leakage between the <i>training</i> set and the <i>test</i> set. They were able to predict 99% of the instances.</p>
+<p>* In addition to their Bert model the DBS team from LMU exploited also the fact that the "same side" relation is an equivalence relation: if a test set contains arguments from the training set, labels can be deduced via the transitivity property (among others). However, the test set underlying the results shown above does not contain such exploitable algebraic or logical structures in order to compare - as intended - the language processing power of the submissions. We would like to mention this fact since the DBS team informed us about their use of this possibility beforehand, which shows their fair-mindedness, and, not least, since their exploitation of the algebraic structure is a smart move.</p>
 
 <hr>
 
 
-<h2> <i>Cross</i> Setting Results</h2>
+<h2> Results <i>Cross Topics</i> </h2>
 <p> We conduct the evaluation on a balanced subset of the <i>Cross</i> domain <i>test</i> set:
  <!--   <ul>
             <li><b>Balanced Test Set:</b> balanced subset of the original <i>cross</i> domain <i>test</i> set.</li>
